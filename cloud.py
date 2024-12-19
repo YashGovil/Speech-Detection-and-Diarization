@@ -11,9 +11,9 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(message)s")
 
 # Cloudinary configuration using environment variables
 cloudinary.config(
-    cloud_name='dszl5v7kg',
-    api_key='383672918773879',
-    api_secret='M9Y5zhdT_4Z8Ra75Wz2sfoY22T8',
+    cloud_name=os.getenv('CLOUDINARY_CLOUD_NAME'),
+    api_key=os.getenv('CLOUDINARY_API_KEY'),
+    api_secret=os.getenv('CLOUDINARY_API_SECRET'),
     secure=True
 )
 
